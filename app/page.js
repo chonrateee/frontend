@@ -1,7 +1,14 @@
+import Carousel from "./(marketing)/components/Carousel";
+import Card from "./(marketing)/components/Card";
 export default function Home() {
   return (
     <>  
-    <h1><center>Mr.Chonratee liangbuds</center></h1>
+  <Carousel> </Carousel>
+  <h1><center>Mr.Chonratee liangbud</center></h1>
+  
+  <Card />
+    <h1><center></center></h1>
     </>
+
   );
 }

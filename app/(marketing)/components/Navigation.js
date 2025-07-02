@@ -1,51 +1,45 @@
-// app/components/Navigation.js
-import Link from 'next/link';
+export default function Navbar() {
 
-export default function Navigation() {
   return (
-    <nav style={{
-      padding: '1rem 2rem', // เพิ่ม padding ด้านข้างให้ดูดีขึ้น
-      backgroundColor: '#282c34', // เปลี่ยนพื้นหลังเป็นสีเข้ม
-      color: '#fff', // เปลี่ยนสีข้อความเป็นขาว
-      borderBottom: '2px solid #444', // ขอบล่างของ navigation
-    }}>
-      <ul style={{
-        display: 'flex',
-        gap: '2rem', // เพิ่มระยะห่างระหว่างเมนู
-        listStyle: 'none',
-        padding: 0,
-        margin: 0,
-        justifyContent: 'center', // จัดเมนูให้อยู่กลาง
-      }}>
-        <li style={{ fontSize: '1.2rem' }}>
-          <Link href="/" style={{
-            color: '#fff', // สีของลิงก์
-            textDecoration: 'none', // เอาเส้นใต้ของลิงก์ออก
-            transition: 'color 0.3s ease', // การเปลี่ยนสีเมื่อ hover
-          }}>หน้าแรก</Link>
+ <nav className="navbar navbar-expand-lg bg-body-tertiary">
+  <div className="container-fluid">
+    <a className="navbar-brand" href="#">Chonratee</a>
+    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span className="navbar-toggler-icon" />
+    </button>
+    <div className="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+        <li className="nav-item">
+          <a className="nav-link active" aria-current="page" href="#">Home</a>
         </li>
-        <li style={{ fontSize: '1.2rem' }}>
-          <Link href="/about" style={{
-            color: '#fff',
-            textDecoration: 'none',
-            transition: 'color 0.3s ease',
-          }}>เกี่ยวกับ</Link>
+        <li className="nav-item">
+          <a className="nav-link" href="#">Link</a>
         </li>
-        <li style={{ fontSize: '1.2rem' }}>
-          <Link href="/service" style={{
-            color: '#fff',
-            textDecoration: 'none',
-            transition: 'color 0.3s ease',
-          }}>บริการของเรา</Link>
+        <li className="nav-item dropdown">
+          <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown
+          </a>
+          <ul className="dropdown-menu">
+            <li><a className="dropdown-item" href="#">Action</a></li>
+            <li><a className="dropdown-item" href="#">Another action</a></li>
+            <li><hr className="dropdown-divider" /></li>
+            <li><a className="dropdown-item" href="#">Something else here</a></li>
+          </ul>
         </li>
-        <li style={{ fontSize: '1.2rem' }}>
-          <Link href="/contact" style={{
-            color: '#fff',
-            textDecoration: 'none',
-            transition: 'color 0.3s ease',
-          }}>ติดต่อ</Link>
+        <li className="nav-item">
+          <a className="nav-link disabled" aria-disabled="true">Disabled</a>
         </li>
       </ul>
-    </nav>
-  );
+      <form className="d-flex" role="search">
+        <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+        <button className="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+)
 }
+
+ 
+

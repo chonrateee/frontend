@@ -1,7 +1,7 @@
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
 import Navigation from "./(marketing)/components/Navigation";
-
+import Footer from "./(marketing)/components/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -26,6 +26,7 @@ export default function RootLayout({ children }) {
       >
         <Navigation />
         {children}
+        <Footer />  {/* เพิ่ม Footer ที่นี่ */}
       </body>
     </html>
   );
