@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <>  
   <Carousel> </Carousel>
-  <h1><center>Mr.Chonratee liangbud</center></h1>
+  <h1><center></center></h1>
   
   <Card />
     <h1><center></center></h1>
